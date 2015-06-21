@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&amp;sensor=true"></script>
+</head>
+
+<body ng-app="starter">
+    <ion-side-menus enable-menu-with-back-views="false">
+        <ion-side-menu-content>
+            <ion-nav-bar class="bar-stable">
+                <ion-nav-back-button>
+                </ion-nav-back-button>
+                <ion-nav-title>
+                    <img src="img/shareterlogo.png" id="header-logo">
+                </ion-nav-title>
+                <ion-nav-buttons side="right">
+                    <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+                    </button>
+                </ion-nav-buttons>
+                <ion-nav-view class="mainContent">
+                </ion-nav-view>
+            </ion-nav-bar>
+
+        </ion-side-menu-content>
+
+        <ion-side-menu side="right">
+            <ion-header-bar class="bar-stable">
+                <h1 class="title">right</h1>
+            </ion-header-bar>
+            <ion-content>
+                <ion-list>
+                    <ion-item menu-close="" ng-click="login()">
+                        Login
+                    </ion-item>
+                    <ion-item menu-close="" href="#/app/search">
+                        Search
+                    </ion-item>
+                    <ion-item menu-close="" href="#/app/browse">
+                        Browse
+                    </ion-item>
+                    <ion-item menu-close="" href="#/app/playlists">
+                        Playlists
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+
+    <ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+        <ion-tab title="&#x5DE;&#x5E4;&#x5D4;" icon-off="ion-map" icon-on="ion-map" href="#/sheltersMap">
+        </ion-tab>
+        <ion-tab title="&#x5E8;&#x5E9;&#x5D9;&#x5DE;&#x5D4;" icon-off="ion-grid" icon-on="ion-grid" href="#/sheltersList">
+        </ion-tab>
+
+    </ion-tabs>
+</body>
+
+</html>
