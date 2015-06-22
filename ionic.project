@@ -1,4 +1,11 @@
 {
   "name": "Shareter",
-  "app_id": "7162e1b8"
+  "app_id": "7162e1b8",
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "12.41.296.5"
+    }
+  ]
 }

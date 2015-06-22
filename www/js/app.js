@@ -8,40 +8,42 @@
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 .run(function ($ionicPlatform) {
-    $ionicPlatform.ready(function () {
-        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-        // for form inputs)
-        if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
-            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-        }
-        if (window.StatusBar) {
-            // org.apache.cordova.statusbar required
-            StatusBar.styleLightContent();
-        }
-    });
-})
+        $ionicPlatform.ready(function () {
+            // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+            // for form inputs)
+            if (window.cordova && window.cordova.plugins.Keyboard) {
+                cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+            }
+            if (window.StatusBar) {
+                // org.apache.cordova.statusbar required
+                StatusBar.styleDefault();
+            }
 
-.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-
-    $ionicConfigProvider.tabs.position('bottom');
-
-    // Ionic uses AngularUI Router which uses the concept of states
-    // Learn more here: https://github.com/angular-ui/ui-router
-    // Set up the various states which the app can be in.
-    // Each state's controller can be found in controllers.js
-    $stateProvider.state('sheltersMap', {
-        url: '/sheltersMap',
-        templateUrl: 'templates/sheltersMap.html',
-        controller: 'MapCtrl'
+            var div = document.getElementById("map_canvas");
+            var map = plugin.google.maps.Map.getMap(div);
+        });
     })
+    .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
-    .state('sheltersList', {
-        url: '/sheltersList',
-        templateUrl: 'templates/sheltersList.html',
-        controller: 'DashCtrl'
+        $ionicConfigProvider.tabs.position('bottom');
+
+        // Ionic uses AngularUI Router which uses the concept of states
+        // Learn more here: https://github.com/angular-ui/ui-router
+        // Set up the various states which the app can be in.
+        // Each state's controller can be found in controllers.js
+        $stateProvider.state('sheltersMap', {
+            url: '/sheltersMap',
+            templateUrl: 'templates/sheltersMap.html',
+            controller: 'MenuCtrl'
+        })
+
+        .state('sheltersList', {
+            url: '/sheltersList',
+            templateUrl: 'templates/sheltersList.html',
+            controller: 'MenuCtrl'
+        });
+
+        // if none of the above states are matched, use this as the fallback
+        $urlRouterProvider.otherwise('/sheltersMap');
+
     });
-
-    // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/sheltersMap');
-
-});
