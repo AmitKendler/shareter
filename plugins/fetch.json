@@ -1,0 +1,62 @@
+{
+    "cordova-plugin-crosswalk-webview": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-crosswalk-webview"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-splashscreen": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-splashscreen"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "plugin.http.request": {
+        "source": {
+            "type": "registry",
+            "id": "plugin.http.request"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "com.google.playservices": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/wf9a5m75/google-play-services",
+            "subdir": ".",
+            "ref": "v23"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "plugin.google.maps": {
+        "source": {
+            "type": "registry",
+            "id": "plugin.google.maps"
+        },
+        "is_top_level": true,
+        "variables": {
+            "API_KEY_FOR_ANDROID": "AIzaSyD9tOFVrl8sEM8lHcq7g1ku4uiG4sf2bw4"
+        }
+    },
+    "cordova-plugin-geolocation": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-geolocation"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}
