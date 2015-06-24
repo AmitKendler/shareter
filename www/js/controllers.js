@@ -48,19 +48,10 @@ angular.module('starter.controllers', [])
                     if (results.length) {
                         var result = results[0];
 
-                        var address = [
-      result.subThoroughfare || "",
-      result.thoroughfare || "",
-      result.locality || "",
-      result.adminArea || "",
-      result.postalCode || "",
-      result.country || ""].join(", ");
-
                         $scope.city = result.locality;
                         $scope.street = result.thoroughfare;
                         $scope.streetNo = parseInt(result.subThoroughfare);
                         $scope.loading = false;
-                        alert(address);
                         $scope.$apply();
                     } else {
                         alert("Not found");
