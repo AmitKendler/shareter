@@ -1,0 +1,36 @@
+<div class="list">
+    <label class="item text-center">
+        <button class="button button-positive" ng-click="fillDataByLocation()">
+            <i class="icon-left ion-navigate" ng-hide="loading"></i>
+            <ion-spinner id="loadig-geocode-spinner" icon="android" ng-show="loading"></ion-spinner>
+            <span>
+            השתמש במיקום הנוכחי שלי
+            </span>
+        </button>
+    </label>
+    <label class="item item-input right-to-left">
+        <span class="input-label">עיר</span>
+        <input type="text" ng-model="city">
+    </label>
+    <label class="item item-input right-to-left">
+        <span class="input-label">רחוב</span>
+        <input type="text" ng-model="street">
+    </label>
+    <label class="item item-input right-to-left">
+        <span class="input-label">מספר</span>
+        <input type="number" ng-model="streetNo">
+    </label>
+
+    <div class="card">
+        <div class="item item-text-wrap">
+            <i class="ion-plus-round"></i>
+        </div>
+    </div>
+
+    <label class="item item-input right-to-left">
+        <span class="input-label">שם מיקום</span>
+        <input type="text">
+    </label>
+
+
+</div>

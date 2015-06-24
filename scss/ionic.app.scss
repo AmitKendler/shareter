@@ -17,7 +17,81 @@ $dark:                            #444 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
-
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+#header-logo {
+    width: 6.1em;
+}
 
+.mainContent {
+    margin-top: 3em;
+}
+
+.scroll {
+    height: 100%;
+}
+
+.sidemenu-label {
+    float: right;
+    margin-right: 2em;
+}
+
+#header-logo {
+    width: 6.1em;
+}
+
+.mainContent {
+    margin-top: 3em;
+}
+
+.scroll {
+    height: 100%;
+}
+
+$dark: #3f4041;
+.dark {
+    background-color: #3f4041 !important;
+    color: #ffffff;
+    .scroll-content {
+        background-color: #3f4041 !important;
+    }
+    .item {
+        background-color: $dark;
+        border: none;
+        border-top: 1px solid #464646;
+        border-bottom: 2px solid #333333;
+        padding: 20px;
+        color: #F0F1F1;
+        max-height: none;
+        &:last-child {
+            border-bottom: 1px solid #333333;
+        }
+        &.current {
+            background-color: darken( $dark, 10%) !important;
+            border-top: 1px solid #464646 !important;
+            border-bottom: 2px solid #333333 !important;
+            p, h3 {
+                opacity: .7;
+            }
+        }
+    }
+    h2,
+    h3,
+    p,
+    a {
+        color: #F0F1F1;
+    }
+}
+
+.dark-head {
+    text-decoration: none;
+}
+
+.right-to-left {
+    direction: rtl;
+}
+
+#loadig-geocode-spinner {
+    position: relative;
+    top: 0.5em;
+}

@@ -6,15 +6,13 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
-    -->
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -47,24 +45,24 @@
             </ion-side-menu-content>
 
             <ion-side-menu side="right" ng-hide="hideRight">
-                <ion-header-bar class="bar-stable">
-                    <h1 class="title">right</h1>
+                <ion-header-bar class="bar bar-dark">
+                    <h1 class="title"></h1>
                 </ion-header-bar>
-                <ion-content>
+                <ion-content class="dark">
+
                     <ion-list>
                         <ion-item menu-close="" ng-click="login()">
-                            Login
-                        </ion-item>
-                        <ion-item menu-close="" href="#/app/search">
-                            Search
-                        </ion-item>
-                        <ion-item menu-close="" href="#/app/browse">
-                            Browse
-                        </ion-item>
-                        <ion-item menu-close="" href="#/app/playlists">
-                            Playlists
+                            <a href="#/addShelter" class="button icon-right ion-plus-circled button-full button-balanced">
+                                הוסף מרחב מוגן למאגר
+                            </a>
                         </ion-item>
                     </ion-list>
+                    <ul class="list">
+                        <a href="#/event/check-in" class="item item-icon-right"> <i class="icon ion-person"></i> <span class="sidemenu-label">איזור אישי</span>
+                        </a>
+                        <a href="#/event/check-in" class="item item-icon-right"> <i class="icon ion-gear-b"></i> <span class="sidemenu-label">הגדרות</span>
+                        </a>
+                    </ul>
                 </ion-content>
             </ion-side-menu>
         </ion-side-menus>
